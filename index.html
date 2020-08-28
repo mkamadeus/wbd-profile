@@ -7,7 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <script src="./assets/scripts/carousel.js"></script>
+    <script src="./carousel.js"></script>
   </head>
 
   <body>
@@ -20,31 +20,31 @@
         <p>My name is <u>Matthew Kevin Amadeus</u>, a pleasure to see you.</p>
         <div class="card">
           <div class="card-content" id="card-content-data">
-            <div>
+            <div id="card-content-data-0">
               <h2>Biodata</h2>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
               computer science. I look forward upon cooperating with you!
             </div>
-            <div>
+            <div id="card-content-data-1">
               <h2>Education</h2>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
               computer science. I look forward upon cooperating with you!
             </div>
-            <div>
+            <div id="card-content-data-2">
               <h2>Skills</h2>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
               computer science. I look forward upon cooperating with you!
             </div>
-            <div>
+            <div id="card-content-data-3">
               <h2>Work Experience</h2>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
               computer science. I look forward upon cooperating with you!
             </div>
-            <div>
+            <div id="card-content-data-4">
               <h2>Project</h2>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
@@ -52,10 +52,8 @@
             </div>
           </div>
           <div class="card-control">
-            <div class="card-control-button" onclick="loadProfile('biodata');">
-              Previous
-            </div>
-            <div class="card-control-button">Next</div>
+            <div class="card-control-button" onclick="prevPage()">Previous</div>
+            <div class="card-control-button" onclick="nextPage()">Next</div>
           </div>
         </div>
       </div>
