@@ -4,7 +4,7 @@
     <meta content="utf-8" http-equiv="encoding" />
     <link rel="stylesheet" href="./style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <script src="./carousel.js"></script>
@@ -16,49 +16,146 @@
         <image src="./assets/images/profile.jpg" class="profile-image"></image>
       </div>
       <div class="right-content">
-        <h1>Welcome.</h1>
-        <p>My name is <u>Matthew Kevin Amadeus</u>, a pleasure to see you.</p>
-        <div class="card">
-          <div class="card-content" id="card-content-data">
+        <div class="carousel-container">
+          <div class="card-control-container">
+            <button class="card-control-button" onclick="prevPage()">
+              <img src="assets/images/caret-left.svg" width="50" />
+            </button>
+          </div>
+          <div class="card-content" id="card-content-data" style="flex-grow: 2">
             <div id="card-content-data-0">
-              <h2>Biodata</h2>
-              My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
-              a student who is eager to learn in the fields and branches of
-              computer science. I look forward upon cooperating with you!
+              <h1>Welcome.</h1>
+              <div>Go to the next page to see more about me.</div>
             </div>
             <div id="card-content-data-1">
-              <h2>Education</h2>
+              <div class="content-header-container">
+                <h1>Biodata</h1>
+                <div>A bit about myself.</div>
+              </div>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
-              computer science. I look forward upon cooperating with you!
+              computer science and software engineering. I look forward upon
+              cooperating with you!
             </div>
             <div id="card-content-data-2">
-              <h2>Skills</h2>
-              My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
-              a student who is eager to learn in the fields and branches of
-              computer science. I look forward upon cooperating with you!
+              <div class="content-header-container">
+                <h1>Education</h1>
+                <div>Here's where I study to gain a degree.</div>
+              </div>
+              <div>
+                <h3>Highschool</h3>
+                <div>SMAK Penabur Gading Serpong</div>
+                <h3>University</h3>
+                <div>Institut Teknologi Bandung</div>
+              </div>
             </div>
             <div id="card-content-data-3">
-              <h2>Work Experience</h2>
-              My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
-              a student who is eager to learn in the fields and branches of
-              computer science. I look forward upon cooperating with you!
+              <div class="content-header-container">
+                <h1>Skills</h1>
+                <div>Below are a list of my skills.</div>
+              </div>
+              <div class="skill-container" id="skill-container-content"></div>
             </div>
             <div id="card-content-data-4">
-              <h2>Project</h2>
+              <div class="content-header-container">
+                <h1>Work Experience</h1>
+                <div>Here's where I gain experience on.</div>
+              </div>
+              <div id="work-container-content">
+                <div class="work-list-item">
+                  <div style="font-weight: 600">
+                    Banana (Sep 2019 - Dec 2019)
+                  </div>
+                  <div>Front-end Developer</div>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <div id="card-content-data-5">
+              <h2>Projects</h2>
               My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
               a student who is eager to learn in the fields and branches of
               computer science. I look forward upon cooperating with you!
             </div>
           </div>
-          <div class="card-control">
-            <div class="card-control-button" onclick="prevPage()">Previous</div>
-            <div class="card-control-button" onclick="nextPage()">Next</div>
+          <div class="card-control-container">
+            <button class="card-control-button" onclick="nextPage()">
+              <img src="assets/images/caret-right.svg" width="50" />
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- <canvas id="particle-canvas"></canvas>
-    <script src="./particle.js"></script> -->
+    -->
+    <script>
+      initializeCarousel();
+      generateSkillChip([
+        "C",
+        "C++",
+        "Java",
+        "JavaFX",
+        "Python",
+        "Flask",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "Tailwind",
+        "Javascript",
+        "React",
+        "React Native",
+        "Next.js",
+        "Gatsby.js",
+        "Vue",
+        "Vuetify",
+        "Nuxt.js",
+        "Typescript",
+        "TypeORM",
+        "MySQL",
+        "PostgreSQL",
+        "Node.js",
+        "Express.js",
+        "GCP",
+        "Selenium",
+      ]);
+      generateWorkListItem([
+        {
+          name: "Anakost",
+          start: "Sep 2019",
+          end: "Dec 2019",
+          job: "Frontend Developer",
+        },
+        {
+          name: "Arkavidia 6.0",
+          start: "Aug 2019",
+          end: "Feb 2020",
+          job: "Frontend Developer",
+        },
+        {
+          name: "Nyampih",
+          start: "Aug 2019",
+          end: "Mar 2020",
+          job: "Frontend Developer",
+        },
+        {
+          name: "Noughts Crosses",
+          start: "May 2020",
+          end: "Aug 2020",
+          job: "Frontend Developer (Freelance)",
+        },
+        {
+          name: "BIST League 3.0",
+          start: "May 2020",
+          end: "Aug 2020",
+          job: "Backend Developer",
+        },
+        {
+          name: "Quadmos",
+          start: "Jul 2020",
+          end: "Present",
+          job: "Fullstack (Freelance)",
+        },
+      ]);
+    </script>
   </body>
 </html>

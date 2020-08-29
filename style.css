@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Raleway";
+  outline: none;
 }
 
 h1 {
@@ -19,7 +20,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50vw 50vw;
   /* padding: 10px; */
   background-color: #070707;
   width: 100%;
@@ -67,22 +68,63 @@ body {
 }
 
 .card-content {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.card-control {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+  padding: 20px;
 }
 
 .card-control-button {
   border-radius: 9999px;
-  padding: 10px;
-  border: 0.75px solid #ddd;
+  padding: 3px;
+  transition: 0.3s;
+  border: 0.75px solid rgba(255, 255, 255, 0);
+  background-color: transparent;
 }
 
 .card-control-button:hover {
-  background-color: #eee;
+  border: 0.75px solid rgba(255, 255, 255, 1);
+  /* background-color: #eee; */
+}
+
+.card-control-button:active {
+  background-color: #aaa;
+}
+
+.card-control-container {
+  padding: 20px;
+  display: flex;
+  align-items: self;
+  justify-items: self;
+}
+
+.carousel-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: -5px;
+}
+
+.skill-chip {
+  border: 0.75px solid #ddd;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 9999px;
+  min-width: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.content-header-container {
+  margin-bottom: 20px;
+}
+
+.work-list-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
