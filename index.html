@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <div class="left-content">
-        <image src="./assets/images/profile.jpg" class="profile-image"></image>
+        <image src="./assets/images/profile.png" class="profile-image"></image>
       </div>
       <div class="right-content">
         <div class="carousel-container">
@@ -22,60 +22,65 @@
               <img src="assets/images/caret-left.svg" width="50" />
             </button>
           </div>
-          <div class="card-content" id="card-content-data" style="flex-grow: 2">
-            <div id="card-content-data-0">
-              <h1>Welcome.</h1>
-              <div>Go to the next page to see more about me.</div>
-            </div>
-            <div id="card-content-data-1">
-              <div class="content-header-container">
-                <h1>Biodata</h1>
-                <div>A bit about myself.</div>
+          <div class="card-content-container">
+            <div id="card-content-data" class="card-content">
+              <div class="card-content-data-item" id="card-content-data-0">
+                <h1>Welcome.</h1>
+                <div>Go to the next page to see more about me.</div>
               </div>
-              My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
-              a student who is eager to learn in the fields and branches of
-              computer science and software engineering. I look forward upon
-              cooperating with you!
-            </div>
-            <div id="card-content-data-2">
-              <div class="content-header-container">
-                <h1>Education</h1>
-                <div>Here's where I study to gain a degree.</div>
-              </div>
-              <div>
-                <h3>Highschool</h3>
-                <div>SMAK Penabur Gading Serpong</div>
-                <h3>University</h3>
-                <div>Institut Teknologi Bandung</div>
-              </div>
-            </div>
-            <div id="card-content-data-3">
-              <div class="content-header-container">
-                <h1>Skills</h1>
-                <div>Below are a list of my skills.</div>
-              </div>
-              <div class="skill-container" id="skill-container-content"></div>
-            </div>
-            <div id="card-content-data-4">
-              <div class="content-header-container">
-                <h1>Work Experience</h1>
-                <div>Here's where I gain experience on.</div>
-              </div>
-              <div id="work-container-content">
-                <div class="work-list-item">
-                  <div style="font-weight: 600">
-                    Banana (Sep 2019 - Dec 2019)
-                  </div>
-                  <div>Front-end Developer</div>
+              <div id="card-content-data-1">
+                <div class="content-header-container">
+                  <h1>Biodata</h1>
+                  <div>A bit about myself.</div>
                 </div>
-                <hr />
+                <div>
+                  My name is Matthew Kevin Amadeus, commonly abbreviated as MK.
+                  I’m a student who is eager to learn in the fields and branches
+                  of computer science and software engineering. I look forward
+                  upon cooperating with you!
+                </div>
               </div>
-            </div>
-            <div id="card-content-data-5">
-              <h2>Projects</h2>
-              My name is Matthew Kevin Amadeus, commonly abbreviated as MK. I’m
-              a student who is eager to learn in the fields and branches of
-              computer science. I look forward upon cooperating with you!
+              <div class="card-content-data-item" id="card-content-data-2">
+                <div class="content-header-container">
+                  <h1>Education</h1>
+                  <div>Here's where I study to gain a degree.</div>
+                </div>
+                <div>
+                  <h3>Highschool</h3>
+                  <div>SMAK Penabur Gading Serpong</div>
+                  <h3>University</h3>
+                  <div>Institut Teknologi Bandung</div>
+                </div>
+              </div>
+              <div class="card-content-data-item" id="card-content-data-3">
+                <div class="content-header-container">
+                  <h1>Skills</h1>
+                  <div>Below are a list of my skills.</div>
+                </div>
+                <div class="skill-container" id="skill-container-content"></div>
+              </div>
+              <div class="card-content-data-item" id="card-content-data-4">
+                <div class="content-header-container">
+                  <h1>Work Experience</h1>
+                  <div>Here's where I gain experience on.</div>
+                </div>
+                <div id="work-container-content">
+                  <div class="work-list-item">
+                    <div style="font-weight: 600">
+                      Banana (Sep 2019 - Dec 2019)
+                    </div>
+                    <div>Front-end Developer</div>
+                  </div>
+                  <hr />
+                </div>
+              </div>
+              <div class="card-content-data-item" id="card-content-data-5">
+                <div class="content-header-container">
+                  <h1>Projects</h1>
+                  <div>My experiments.</div>
+                </div>
+                <div id="project-container-content"></div>
+              </div>
             </div>
           </div>
           <div class="card-control-container">
@@ -154,6 +159,37 @@
           start: "Jul 2020",
           end: "Present",
           job: "Fullstack (Freelance)",
+        },
+      ]);
+      generateProjectListItem([
+        {
+          name: "Quadtree Decomposition",
+          description:
+            "Using Python with OpenCV, I created a simulation of quadtree decomposition to compress images.",
+        },
+        {
+          name: "Floodfill Simulation",
+          description:
+            "Using Python with OpenCV, I created a simulation of the floodfill algorithm.",
+        },
+        {
+          name: "mkamadeus.id",
+          description: "My personal website which currently is down.",
+        },
+        {
+          name: "NIC ITB NIM Scraper",
+          description:
+            "Using Python, I scraped the data of students of ITB from nic.itb.ac.id.",
+        },
+        {
+          name: "Geprek NIM Finder",
+          description:
+            "Using React and the data I scraped, I created my own ITB NIM Finder.",
+        },
+        {
+          name: "Typescript TypeORM Boilerplate",
+          description:
+            "I have created a boilerplate for upcoming projects based on Typescript and TypeORM.",
         },
       ]);
     </script>

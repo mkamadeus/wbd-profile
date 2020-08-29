@@ -6,6 +6,10 @@
   outline: none;
 }
 
+h1:not {
+  line-height: 1.6;
+}
+
 h1 {
   font-weight: 600;
   font-size: 72px;
@@ -44,7 +48,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 110px;
   /* background-color: blue; */
 }
 
@@ -67,8 +71,30 @@ body {
   color: #070707;
 }
 
-.card-content {
+.card-content-container {
   padding: 20px;
+  max-width: 50vw;
+  max-height: 75vh;
+  min-height: 75vh;
+  overflow-y: auto;
+  flex-grow: 2;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.card-content {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  transition: transform 0.3s;
+  /* width: auto; */
+  /* overflow: auto; */
+}
+
+.card-content-data-item {
+  padding: 10px;
 }
 
 .card-control-button {
