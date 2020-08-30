@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <title>Matthew Kevin Amadeus</title>
     <script src="./carousel.js"></script>
   </head>
 
@@ -19,7 +20,7 @@
         <div class="carousel-container">
           <div class="card-control-container">
             <button class="card-control-button" onclick="prevPage()">
-              <img src="assets/images/caret-left.svg" width="50" />
+              <img src="assets/images/caret-left.svg" width="40" />
             </button>
           </div>
           <div class="card-content-container">
@@ -28,7 +29,7 @@
                 <h1>Welcome.</h1>
                 <div>Go to the next page to see more about me.</div>
               </div>
-              <div id="card-content-data-1">
+              <div class="card-content-data-item" id="card-content-data-1">
                 <div class="content-header-container">
                   <h1>Biodata</h1>
                   <div>A bit about myself.</div>
@@ -46,10 +47,16 @@
                   <div>Here's where I study to gain a degree.</div>
                 </div>
                 <div>
-                  <h3>Highschool</h3>
-                  <div>SMAK Penabur Gading Serpong</div>
-                  <h3>University</h3>
-                  <div>Institut Teknologi Bandung</div>
+                  <div style="margin-bottom: 5px">
+                    <h3>Highschool</h3>
+                    <div>SMAK Penabur Gading Serpong - Natural Sciences</div>
+                  </div>
+                  <div style="margin-bottom: 5px">
+                    <h3>University</h3>
+                    <div>
+                      Institut Teknologi Bandung - Informatics Engineering 2018
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="card-content-data-item" id="card-content-data-3">
@@ -65,12 +72,7 @@
                   <div>Here's where I gain experience on.</div>
                 </div>
                 <div id="work-container-content">
-                  <div class="work-list-item">
-                    <div style="font-weight: 600">
-                      Banana (Sep 2019 - Dec 2019)
-                    </div>
-                    <div>Front-end Developer</div>
-                  </div>
+                  <div class="work-list-item"></div>
                   <hr />
                 </div>
               </div>
@@ -81,11 +83,25 @@
                 </div>
                 <div id="project-container-content"></div>
               </div>
+              <div class="card-content-data-item" id="card-content-data-6">
+                <div class="content-header-container">
+                  <h1>Connect.</h1>
+                  <div>Get in touch with me.</div>
+                </div>
+                <div class="connect-container">
+                  <a href="https://github.com/mkamadeus" class="connect-item"
+                    >Github</a
+                  >
+                  <a href="www.linkedin.com/in/mkamadeus" class="connect-item"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
           <div class="card-control-container">
             <button class="card-control-button" onclick="nextPage()">
-              <img src="assets/images/caret-right.svg" width="50" />
+              <img src="assets/images/caret-right.svg" width="40" />
             </button>
           </div>
         </div>

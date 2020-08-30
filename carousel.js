@@ -1,30 +1,34 @@
 let index = 0;
 let minIndex = 0;
-let maxIndex = 5;
+let maxIndex = 6;
 let contentCount = maxIndex - minIndex + 1;
 let contentWidths = [];
-// for(let i = minIndex; i)
 
 function initializeCarousel() {
   let currentWidth = 0;
   for (let i = 0; i <= maxIndex; i++) {
-    // document.getElementById(`card-content-data-${i}`).style.display = "none";
+    if (i > 0) {
+      document.getElementById(`card-content-data-${i}`).style.transform =
+        "scale(0.65)";
+      document.getElementById(`card-content-data-${i}`).style.opacity = "0.2";
+    }
     contentWidths.push(currentWidth);
     currentWidth += document.getElementById(`card-content-data-${i}`)
-      .clientWidth;
+      .offsetWidth;
   }
 }
 
 function nextPage() {
-  let contentWidth = document.getElementById("card-content-data").clientWidth;
-  console.log(contentWidth);
   if (index < maxIndex) {
-    // document.getElementById(`card-content-data-${index}`).style.display =
-    //   "none";
-    // index++;
-    // document.getElementById(`card-content-data-${index}`).style.display =
-    //   "block";
+    document.getElementById(
+      `card-content-data-${index}`
+    ).style.transform = `scale(0.65)`;
+    document.getElementById(`card-content-data-${index}`).style.opacity = "0.2";
     index++;
+    document.getElementById(
+      `card-content-data-${index}`
+    ).style.transform = `scale(1)`;
+    document.getElementById(`card-content-data-${index}`).style.opacity = "1";
     document.getElementById(
       `card-content-data`
     ).style.transform = `translateX(-${contentWidths[index]}px)`;
@@ -32,17 +36,19 @@ function nextPage() {
 }
 
 function prevPage() {
-  let contentWidth = document.getElementById("card-content-data").clientHeight;
   if (index > minIndex) {
+    document.getElementById(
+      `card-content-data-${index}`
+    ).style.transform = `scale(0.65)`;
+    document.getElementById(`card-content-data-${index}`).style.opacity = "0.2";
     index--;
+    document.getElementById(
+      `card-content-data-${index}`
+    ).style.transform = `scale(1)`;
+    document.getElementById(`card-content-data-${index}`).style.opacity = "1";
     document.getElementById(
       `card-content-data`
     ).style.transform = `translateX(-${contentWidths[index]}px)`;
-    // document.getElementById(`card-content-data-${index}`).style.display =
-    //   "none";
-    // index--;
-    // document.getElementById(`card-content-data-${index}`).style.display =
-    //   "block";
   }
 }
 
